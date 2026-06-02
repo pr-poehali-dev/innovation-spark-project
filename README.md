@@ -1,3 +1,7 @@
-# innovation-spark-project
+# Лендинг для бренда чая мате
 
-Initial repository setup for pr-poehali-dev/innovation-spark-project
+![Preview](https://cdn.poehali.dev/templates/erba-mate-ru/preview-ru.jpg)
+
+Премиальный лендинг для продажи чая мате с эффектным темным дизайном. Включает прелоадер с прогресс-баром, бегущую строку с промокодом, hero-секцию с фоновым изображением, блок преимуществ с градиентными карточками, секцию о происхождении продукта, галерею товаров, карточки с ценами и рассрочкой, CTA-блок и футер. Все секции анимированы с помощью GSAP и ScrollTrigger.
+
+`"tags": ["landing", "dark", "ecommerce", "animations", "pricing", "gradient"]`
