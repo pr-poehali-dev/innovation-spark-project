@@ -221,10 +221,11 @@ export default function RinzoLandingPage() {
       {isLoading && (
         <div className="fixed inset-0 z-[100000] flex flex-col items-center justify-center bg-[#0E0E0E]">
           <div className="flex flex-col items-center gap-8 px-6">
-            <h1 className="font-serif text-4xl tracking-tight text-white md:text-5xl lg:text-6xl">
-              RINZO
-              <span className="block text-[#B59F26]">AUTO</span>
-            </h1>
+            <img
+              src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/bucket/62b04c9f-eaa6-4fe6-86b6-2d45b0084264.jfif"
+              alt="Rinzo"
+              className="h-20 w-auto object-contain md:h-24"
+            />
 
             <div className="w-full max-w-md">
               <div className="h-2 w-full overflow-hidden rounded-full bg-[#1E1E1E]">
@@ -606,9 +607,11 @@ export default function RinzoLandingPage() {
         {/* Footer */}
         <footer className="w-full border-t border-[#333333] px-6 py-12 md:px-20 lg:px-[420px]">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6">
-            <h2 className="font-serif text-2xl tracking-tight text-white md:text-3xl">
-              RINZO <span className="text-[#B59F26]">AUTO</span>
-            </h2>
+            <img
+              src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/bucket/62b04c9f-eaa6-4fe6-86b6-2d45b0084264.jfif"
+              alt="Rinzo"
+              className="h-12 w-auto object-contain"
+            />
             <p className="text-center text-sm leading-relaxed tracking-tight text-white/55 md:text-base">
               2025 - Rinzo. Все права защищены.
             </p>
