@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function YerbaVerdeLandingPage() {
+export default function RinzoLandingPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
@@ -21,7 +21,6 @@ export default function YerbaVerdeLandingPage() {
   const ctaRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    // Animate progress bar from 0 to 100 over 3 seconds
     const duration = 3000
     const interval = 30
     const steps = duration / interval
@@ -33,7 +32,6 @@ export default function YerbaVerdeLandingPage() {
       if (currentProgress >= 100) {
         currentProgress = 100
         clearInterval(timer)
-        // Wait a bit before hiding preloader
         setTimeout(() => {
           setIsLoading(false)
         }, 200)
@@ -62,7 +60,6 @@ export default function YerbaVerdeLandingPage() {
         }
       }
 
-      // Hero animation
       gsap.from(heroRef.current?.querySelector(".hero-content"), {
         opacity: 0,
         y: 60,
@@ -78,7 +75,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // Benefits section
       gsap.from(benefitsRef.current?.querySelector(".benefits-title"), {
         scrollTrigger: {
           trigger: benefitsRef.current,
@@ -102,7 +98,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // About section
       gsap.from(aboutRef.current?.querySelector(".about-image"), {
         scrollTrigger: {
           trigger: aboutRef.current,
@@ -125,7 +120,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // Desire section
       gsap.from(desireRef.current?.querySelector("h2"), {
         scrollTrigger: {
           trigger: desireRef.current,
@@ -149,7 +143,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // Instigate section
       gsap.from(instigateRef.current?.querySelector(".instigate-content"), {
         scrollTrigger: {
           trigger: instigateRef.current,
@@ -173,7 +166,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // Why section
       gsap.from(whyRef.current?.querySelector(".why-content"), {
         scrollTrigger: {
           trigger: whyRef.current,
@@ -197,7 +189,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // Pricing cards
       gsap.from(pricingRef.current?.querySelectorAll(".pricing-card"), {
         scrollTrigger: {
           trigger: pricingRef.current,
@@ -210,7 +201,6 @@ export default function YerbaVerdeLandingPage() {
         ease: "power3.out",
       })
 
-      // CTA section
       gsap.from(ctaRef.current?.querySelector(".cta-box"), {
         scrollTrigger: {
           trigger: ctaRef.current,
@@ -231,13 +221,11 @@ export default function YerbaVerdeLandingPage() {
       {isLoading && (
         <div className="fixed inset-0 z-[100000] flex flex-col items-center justify-center bg-[#0E0E0E]">
           <div className="flex flex-col items-center gap-8 px-6">
-            {/* Logo or brand name */}
             <h1 className="font-serif text-4xl tracking-tight text-white md:text-5xl lg:text-6xl">
-              YERBA
-              <span className="block text-[#B59F26]">VERDE</span>
+              RINZO
+              <span className="block text-[#B59F26]">AUTO</span>
             </h1>
 
-            {/* Progress bar container */}
             <div className="w-full max-w-md">
               <div className="h-2 w-full overflow-hidden rounded-full bg-[#1E1E1E]">
                 <div
@@ -255,9 +243,8 @@ export default function YerbaVerdeLandingPage() {
         {/* Marquee */}
         <div ref={marqueeRef} className="w-full overflow-hidden bg-[#6B5C08] py-4">
           <div className="marquee-content flex items-center gap-4 whitespace-nowrap">
-            {/* First set of items */}
             <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
+              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: RINZO10</span>
             </div>
             <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
               <span className="font-serif text-xs font-normal text-white md:text-sm">
@@ -265,15 +252,7 @@ export default function YerbaVerdeLandingPage() {
               </span>
             </div>
             <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
-            </div>
-            <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
-              <span className="font-serif text-xs font-normal text-white md:text-sm">
-                СКИДКА 10% НА ПЕРВЫЙ ЗАКАЗ
-              </span>
-            </div>
-            <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
+              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: RINZO10</span>
             </div>
             <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
               <span className="font-serif text-xs font-normal text-white md:text-sm">
@@ -283,7 +262,7 @@ export default function YerbaVerdeLandingPage() {
 
             {/* Duplicated set for seamless loop */}
             <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
+              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: RINZO10</span>
             </div>
             <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
               <span className="font-serif text-xs font-normal text-white md:text-sm">
@@ -291,7 +270,7 @@ export default function YerbaVerdeLandingPage() {
               </span>
             </div>
             <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
+              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: RINZO10</span>
             </div>
             <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
               <span className="font-serif text-xs font-normal text-white md:text-sm">
@@ -299,7 +278,7 @@ export default function YerbaVerdeLandingPage() {
               </span>
             </div>
             <div className="flex items-center justify-center rounded-xl bg-white px-6 py-1.5 md:px-8">
-              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: ПЕРВЫЙ10</span>
+              <span className="font-serif text-xs font-normal text-black md:text-sm">ПРОМОКОД: RINZO10</span>
             </div>
             <div className="flex items-center justify-center rounded-xl px-4 py-1.5 md:px-6">
               <span className="font-serif text-xs font-normal text-white md:text-sm">
@@ -322,14 +301,14 @@ export default function YerbaVerdeLandingPage() {
           <div className="flex w-full max-w-7xl flex-col items-center gap-8 md:gap-12 lg:gap-14">
             <div className="hero-content flex flex-col items-center gap-5 text-center">
               <h1 className="text-balance font-serif text-3xl leading-tight tracking-tight text-white md:text-5xl lg:text-[56px]">
-                Откройте настоящий вкус чая мате
+                Авточехлы Rinzo — идеальная посадка для японских авто
               </h1>
               <p className="max-w-4xl text-pretty text-base leading-relaxed tracking-tight text-[#CCCCCC] md:text-lg">
-                Уникальный опыт, который превращает каждую чашку в особенный момент.
+                Премиальная экокожа PVC, точный крой под правый руль. Защита и стиль — с первого взгляда.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2.5">
                 <Button className="h-12 rounded-xl bg-white px-4 font-serif text-base text-[#0E0E0E] hover:bg-white/90 md:text-lg">
-                  Купить сейчас
+                  Заказать сейчас
                 </Button>
                 <Button
                   variant="outline"
@@ -341,8 +320,8 @@ export default function YerbaVerdeLandingPage() {
             </div>
             <div className="hero-image relative h-[300px] w-full max-w-2xl md:h-[400px] lg:h-[583px] lg:max-w-[884px]">
               <img
-                src="/images/design-mode/hero-image.png"
-                alt="Yerba Verde - премиальный чай мате"
+                src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/de762954-51c9-40f6-ab55-cc3e586f17e0.jpg"
+                alt="Авточехлы Rinzo — премиальная экокожа"
                 className="h-full w-full object-contain"
               />
             </div>
@@ -354,35 +333,33 @@ export default function YerbaVerdeLandingPage() {
           <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 lg:flex-row lg:gap-12">
             <div className="benefits-title flex flex-col gap-6 lg:flex-1">
               <h2 className="text-balance font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
-                Непревзойденный вкус и качество
+                Качество, которое видно и чувствуется
               </h2>
               <p className="text-pretty text-base leading-relaxed tracking-tight text-white md:text-lg">
-                Натуральный чай мате высшего качества, сбалансированный и ароматный, без добавления сахара, для
-                настоящих ценителей традиционного напитка.
+                Rinzo — авточехлы из экокожи PVC премиум-класса, созданные специально для японских автомобилей с правым рулём. Точная подгонка, долговечный материал, безупречный вид.
               </p>
             </div>
             <div className="flex flex-col gap-2 lg:flex-1">
               <div className="benefit-card flex flex-col gap-2 rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#0E0E0E] p-6 md:p-8">
-                <h3 className="font-serif text-2xl leading-tight tracking-tight text-white md:text-4xl">100% Натуральный</h3>
+                <h3 className="font-serif text-2xl leading-tight tracking-tight text-white md:text-4xl">Точный крой под правый руль</h3>
                 <p className="text-sm leading-relaxed tracking-tight text-white md:text-base">
-                  Чай мате из лучших плантаций Южной Америки, более 3000 листьев на килограмм.
+                  Каждый комплект разработан под конкретные модели японских авто — идеальная посадка без подгонки.
                 </p>
               </div>
               <div className="benefit-card flex flex-col gap-2 rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#0E0E0E] p-6 md:p-8">
                 <h3 className="font-serif text-2xl leading-tight tracking-tight text-white md:text-4xl">
-                  Мягкий и насыщенный вкус
+                  Экокожа PVC премиум
                 </h3>
                 <p className="text-sm leading-relaxed tracking-tight text-white md:text-base">
-                  Идеальный баланс аромата и вкуса, без необходимости добавления сахара.
+                  Мягкая на ощупь, устойчивая к износу и влаге. Выглядит как дорогой кожаный салон.
                 </p>
               </div>
               <div className="benefit-card flex flex-col gap-2 rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#0E0E0E] p-6 md:p-8">
                 <h3 className="font-serif text-2xl leading-tight tracking-tight text-white md:text-4xl">
-                  Выращен в горах
+                  Установка за 20 минут
                 </h3>
                 <p className="text-sm leading-relaxed tracking-tight text-white md:text-base">
-                  Растет на высоте более 1200 метров в идеальных климатических условиях, что обеспечивает
-                  уникальный и стойкий вкус.
+                  Простая установка без специального инструмента. В комплекте подробная инструкция.
                 </p>
               </div>
             </div>
@@ -394,25 +371,20 @@ export default function YerbaVerdeLandingPage() {
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 lg:flex-row lg:gap-12">
             <div className="about-image w-full lg:flex-1">
               <img
-                src="/images/design-mode/about-image.png"
-                alt="Карта происхождения чая мате"
+                src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/494c9690-5468-4435-a7fa-89a2a13bbd59.jpg"
+                alt="Интерьер японского авто с авточехлами Rinzo"
                 className="h-auto w-full rounded-2xl object-cover"
               />
             </div>
             <div className="about-content flex flex-col gap-6 lg:flex-1">
               <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
-                Происхождение вкуса
+                Создано для японских авто
               </h2>
               <p className="text-pretty text-base leading-relaxed tracking-tight text-white md:text-lg">
-                В одной из самых высокогорных точек Южной Америки рождается чай мате, который выделяется
-                своим несравненным качеством. На высоте более 1200 метров идеальный климат и плодородная
-                почва создают условия для выращивания мате с уникальным ароматом и вкусом. Каждый лист
-                тщательно собирается, гарантируя сбалансированный и стойкий вкус, который делает каждую
-                чашку особенной. От горных плантаций до вашей чашки — испытайте настоящую сущность
-                натурального чая мате.
+                Японские автомобили с правым рулём имеют особую компоновку салона — стандартные чехлы просто не садятся как надо. Rinzo разработаны с учётом всех особенностей: расположение подлокотников, форма сидений, крепления подголовников. Материал экокожа PVC выдерживает сибирские морозы и летний зной, не трескается и не выгорает. Преобразите салон раз и надолго.
               </p>
               <Button className="h-12 w-full rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#B59F26] font-serif text-lg text-white hover:opacity-90 md:text-xl">
-                Купить сейчас
+                Заказать сейчас
               </Button>
             </div>
           </div>
@@ -420,82 +392,104 @@ export default function YerbaVerdeLandingPage() {
 
         {/* Desire */}
         <section ref={desireRef} className="w-full px-6 py-16 md:px-20 md:py-24 lg:px-80 lg:py-28">
-          <div className="mx-auto max-w-7xl">
-            <div className="rounded-[40px] border-2 border-[#1E1E1E] bg-[#0E0E0E] px-6 py-12 md:px-12 md:py-16 lg:px-24">
-              <h2 className="mb-8 text-balance text-center font-serif text-3xl leading-tight tracking-tight text-white md:mb-12 md:text-4xl lg:text-[56px]">
-                Откройте для себя настоящий вкус традиции в любой момент
-              </h2>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-                <div className="desire-image overflow-hidden rounded-2xl rounded-b-none">
-                  <img
-                    src="/images/design-mode/desire-image-01.png"
-                    alt="Yerba Verde - упаковка"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="desire-image overflow-hidden rounded-2xl rounded-b-none">
-                  <img
-                    src="/images/design-mode/desire-image-02.png"
-                    alt="Yerba Verde - упаковка"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="desire-image overflow-hidden rounded-2xl">
-                  <img
-                    src="/images/design-mode/desire-image-03.png"
-                    alt="Yerba Verde - упаковка"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+          <div className="mx-auto flex max-w-7xl flex-col gap-8">
+            <h2 className="text-balance font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
+              Посмотрите, как меняется салон
+            </h2>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div className="desire-image overflow-hidden rounded-2xl">
+                <img
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/de762954-51c9-40f6-ab55-cc3e586f17e0.jpg"
+                  alt="Авточехлы Rinzo — вид спереди"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="desire-image overflow-hidden rounded-2xl">
+                <img
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/494c9690-5468-4435-a7fa-89a2a13bbd59.jpg"
+                  alt="Авточехлы Rinzo в салоне"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="desire-image overflow-hidden rounded-2xl">
+                <img
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/dc474d72-349e-47c8-bce5-666dae997133.jpg"
+                  alt="Текстура экокожи PVC Rinzo"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
             </div>
           </div>
         </section>
 
         {/* Instigate */}
-        <section ref={instigateRef} className="w-full px-6 py-16 md:px-20 md:py-24 lg:px-[420px] lg:py-28">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 md:gap-12">
-            <div className="instigate-content flex flex-col gap-6 text-center">
-              <h2 className="text-balance font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-[56px]">
-                Чего вы ждете?
-              </h2>
-              <p className="text-pretty text-base leading-relaxed tracking-tight text-[#CCCCCC] md:text-lg">
-                Жизнь состоит из моментов, и хороший мате превращает простое в особенное. Не соглашайтесь на
-                меньшее — выбирайте настоящую эссенцию вкуса и наслаждайтесь каждым глотком.
-              </p>
+        <section ref={instigateRef} className="w-full px-6 py-16 md:px-20 md:py-24 lg:px-80 lg:py-28">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 lg:flex-row-reverse lg:gap-12">
+            <div className="instigate-image w-full lg:flex-1">
+              <img
+                src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/dc474d72-349e-47c8-bce5-666dae997133.jpg"
+                alt="Материал экокожи PVC Rinzo крупным планом"
+                className="h-auto w-full rounded-2xl object-cover"
+              />
             </div>
-            <div
-              className="instigate-image relative flex min-h-[400px] w-full items-end justify-center rounded-[40px] p-6 md:min-h-[600px] md:p-10 lg:min-h-[850px]"
-              style={{
-                backgroundImage:
-                  "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-image-f1qFMJiDw7Rhdpat9cdzPtUdrGnBUq.png)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <Button className="h-16 w-full max-w-md rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#B59F26] font-serif text-xl text-white hover:opacity-90 md:h-24 md:text-3xl lg:text-[32px]">
-                Купить сейчас
-              </Button>
+            <div className="instigate-content flex flex-col gap-6 lg:flex-1">
+              <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
+                Материал, который не подведёт
+              </h2>
+              <p className="text-pretty text-base leading-relaxed tracking-tight text-white md:text-lg">
+                Экокожа PVC Rinzo — это не дешёвый кожзам. Это современный материал с мягкой подложкой, который не скользит, не электризуется и легко чистится влажной тряпкой. Швы усилены, стежок равномерный — чехлы служат годами.
+              </p>
+              <ul className="flex flex-col gap-3 text-base text-white/80 md:text-lg">
+                <li className="flex items-center gap-2">
+                  <span className="text-[#B59F26]">✓</span> Выдерживает от −40°C до +80°C
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#B59F26]">✓</span> Устойчив к истиранию и царапинам
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#B59F26]">✓</span> Не выгорает на солнце
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#B59F26]">✓</span> Гипоаллергенный состав
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         {/* Why */}
-        <section ref={whyRef} className="w-full px-6 py-16 md:px-20 md:py-24 lg:px-[420px] lg:py-28">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 md:gap-12">
-            <div className="why-content flex flex-col gap-6 text-center">
-              <h2 className="text-balance font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-[56px]">
-                Почему выбирают Yerba Verde?
+        <section ref={whyRef} className="w-full px-6 py-16 md:px-20 md:py-24 lg:px-80 lg:py-28">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 lg:flex-row lg:gap-12">
+            <div className="why-content flex flex-col gap-6 lg:flex-1">
+              <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
+                Почему выбирают Rinzo?
               </h2>
-              <p className="text-pretty text-base leading-relaxed tracking-tight text-[#CCCCCC] md:text-lg">
-                Жизнь состоит из моментов, и хороший мате превращает простое в особенное. Не соглашайтесь на
-                меньшее — выбирайте настоящую эссенцию вкуса и наслаждайтесь каждым глотком.
+              <p className="text-pretty text-base leading-relaxed tracking-tight text-white md:text-lg">
+                Сотни владельцев японских авто уже преобразили свой салон с Rinzo. Точный крой, честное качество и удобный заказ с доставкой по всей России — вот почему нас рекомендуют друзьям.
               </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1 rounded-2xl border border-white/10 p-4">
+                  <span className="font-serif text-3xl font-bold text-[#B59F26]">500+</span>
+                  <span className="text-sm text-white/60">довольных клиентов</span>
+                </div>
+                <div className="flex flex-col gap-1 rounded-2xl border border-white/10 p-4">
+                  <span className="font-serif text-3xl font-bold text-[#B59F26]">50+</span>
+                  <span className="text-sm text-white/60">моделей японских авто</span>
+                </div>
+                <div className="flex flex-col gap-1 rounded-2xl border border-white/10 p-4">
+                  <span className="font-serif text-3xl font-bold text-[#B59F26]">2 года</span>
+                  <span className="text-sm text-white/60">гарантия на материал</span>
+                </div>
+                <div className="flex flex-col gap-1 rounded-2xl border border-white/10 p-4">
+                  <span className="font-serif text-3xl font-bold text-[#B59F26]">1–3 дня</span>
+                  <span className="text-sm text-white/60">доставка по России</span>
+                </div>
+              </div>
             </div>
-            <div className="why-image w-full">
+            <div className="why-image w-full lg:flex-1">
               <img
-                src="/images/design-mode/why-image.png"
-                alt="Почему выбирают Yerba Verde"
+                src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/494c9690-5468-4435-a7fa-89a2a13bbd59.jpg"
+                alt="Rinzo авточехлы в японском авто"
                 className="h-auto w-full rounded-2xl object-cover"
               />
             </div>
@@ -507,89 +501,89 @@ export default function YerbaVerdeLandingPage() {
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {/* Card 1 */}
             <Card className="pricing-card flex flex-col gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#333333] to-[#0E0E0E] p-6 shadow-lg md:p-8">
-              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#6B5C08]">
+              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#1a1a1a]">
                 <img
-                  src="/images/design-mode/image-card-01.png"
-                  alt="Чай мате Yerba Verde - 1 кг"
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/de762954-51c9-40f6-ab55-cc3e586f17e0.jpg"
+                  alt="Авточехлы Rinzo Базовый"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">
-                  Чай мате Yerba Verde
+                  Rinzo Базовый
                 </h3>
-                <p className="text-sm text-white/55 md:text-base">1 кг</p>
+                <p className="text-sm text-white/55 md:text-base">Передние + задние сиденья</p>
               </div>
-              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">2 500 р.</p>
+              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">4 990 р.</p>
               <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 3 месяцев</p>
               <Button className="h-12 w-full rounded-xl bg-[#B59F26] text-base font-medium text-white hover:bg-[#B59F26]/90 md:text-lg">
-                КУПИТЬ
+                ЗАКАЗАТЬ
               </Button>
             </Card>
 
             {/* Card 2 */}
             <Card className="pricing-card flex flex-col gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#333333] to-[#0E0E0E] p-6 shadow-lg md:p-8">
-              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#6B5C08]">
+              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#1a1a1a]">
                 <img
-                  src="/images/design-mode/image-card-02.png"
-                  alt="Набор для мате Yerba Verde"
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/494c9690-5468-4435-a7fa-89a2a13bbd59.jpg"
+                  alt="Авточехлы Rinzo Комплект"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">
-                  Набор для мате Yerba Verde
+                  Rinzo Комплект
                 </h3>
-                <p className="text-sm text-white/55 md:text-base">Мате + Калабас + Бомбилья</p>
+                <p className="text-sm text-white/55 md:text-base">Весь салон + подголовники</p>
               </div>
-              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">7 500 р.</p>
+              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">7 490 р.</p>
               <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 4 месяцев</p>
               <Button className="h-12 w-full rounded-xl bg-[#B59F26] text-base font-medium text-white hover:bg-[#B59F26]/90 md:text-lg">
-                КУПИТЬ
+                ЗАКАЗАТЬ
               </Button>
             </Card>
 
             {/* Card 3 */}
             <Card className="pricing-card flex flex-col gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#333333] to-[#0E0E0E] p-6 shadow-lg md:p-8">
-              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#6B5C08]">
+              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#1a1a1a]">
                 <img
-                  src="/images/design-mode/image-card-03.png"
-                  alt="Набор 3 упаковки чая мате Yerba Verde"
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/dc474d72-349e-47c8-bce5-666dae997133.jpg"
+                  alt="Авточехлы Rinzo Премиум"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">
-                  Набор 3 упаковки Yerba Verde
+                  Rinzo Премиум
                 </h3>
-                <p className="text-sm text-white/55 md:text-base">3 кг</p>
+                <p className="text-sm text-white/55 md:text-base">Весь салон + перфорация</p>
               </div>
-              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">6 900 р.</p>
-              <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 3 месяцев</p>
+              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">9 990 р.</p>
+              <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 6 месяцев</p>
               <Button className="h-12 w-full rounded-xl bg-[#B59F26] text-base font-medium text-white hover:bg-[#B59F26]/90 md:text-lg">
-                КУПИТЬ
+                ЗАКАЗАТЬ
               </Button>
             </Card>
 
             {/* Card 4 */}
             <Card className="pricing-card flex flex-col gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#333333] to-[#0E0E0E] p-6 shadow-lg md:p-8">
-              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#6B5C08]">
+              <div className="aspect-square w-full overflow-hidden rounded-[20px] bg-[#1a1a1a]">
                 <img
-                  src="/images/design-mode/image-card-04.png"
-                  alt="Набор 10 упаковок чая мате Yerba Verde"
+                  src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/files/de762954-51c9-40f6-ab55-cc3e586f17e0.jpg"
+                  alt="Авточехлы Rinzo под заказ"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">
-                  Набор 10 упаковок Yerba Verde
+                  Rinzo Индивидуальный
                 </h3>
-                <p className="text-sm text-white/55 md:text-base">10 кг</p>
+                <p className="text-sm text-white/55 md:text-base">Пошив под вашу модель</p>
               </div>
-              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">19 900 р.</p>
-              <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 4 месяцев</p>
+              <p className="text-4xl font-bold tracking-tight text-white md:text-5xl">от 12 000 р.</p>
+              <p className="text-xs tracking-tight text-white md:text-sm">Рассрочка до 6 месяцев</p>
               <Button className="h-12 w-full rounded-xl bg-[#B59F26] text-base font-medium text-white hover:bg-[#B59F26]/90 md:text-lg">
-                КУПИТЬ
+                ЗАКАЗАТЬ
               </Button>
             </Card>
           </div>
@@ -600,7 +594,7 @@ export default function YerbaVerdeLandingPage() {
           <div className="mx-auto max-w-5xl">
             <div className="cta-box flex flex-col items-center gap-6 rounded-[20px] bg-gradient-to-r from-[#6B5C08] to-[#B59F26] p-6 md:flex-row md:gap-8 md:p-12 lg:p-16">
               <p className="flex-1 text-balance text-center font-semibold leading-tight tracking-tight text-white md:text-left md:text-2xl lg:text-[26px]">
-                Свяжитесь с нами прямо сейчас и узнайте больше о Yerba Verde!
+                Узнайте, подходят ли чехлы Rinzo для вашей модели — свяжитесь с нами!
               </p>
               <Button className="h-12 w-full rounded-xl bg-[#0E0E0E] text-base text-white hover:bg-[#0E0E0E]/90 md:w-auto md:px-8 md:text-lg">
                 Связаться с нами
@@ -613,10 +607,10 @@ export default function YerbaVerdeLandingPage() {
         <footer className="w-full border-t border-[#333333] px-6 py-12 md:px-20 lg:px-[420px]">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6">
             <h2 className="font-serif text-2xl tracking-tight text-white md:text-3xl">
-              YERBA <span className="text-[#B59F26]">VERDE</span>
+              RINZO <span className="text-[#B59F26]">AUTO</span>
             </h2>
             <p className="text-center text-sm leading-relaxed tracking-tight text-white/55 md:text-base">
-              2025 - Yerba Verde. Все права защищены.
+              2025 - Rinzo. Все права защищены.
             </p>
           </div>
         </footer>
