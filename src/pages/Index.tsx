@@ -241,6 +241,15 @@ export default function RinzoLandingPage() {
       )}
 
       <main className="w-full overflow-x-hidden bg-[#0E0E0E]">
+        {/* Header */}
+        <header className="w-full px-6 py-4 md:px-20 lg:px-80">
+          <img
+            src="https://cdn.poehali.dev/projects/07605dfe-074b-4902-85e6-514c9d9e839f/bucket/3b021e97-5ea9-4c73-b599-0aab13b88864.PNG"
+            alt="Rinzo"
+            className="h-10 w-auto object-contain brightness-0 invert md:h-12"
+          />
+        </header>
+
         {/* Marquee */}
         <div ref={marqueeRef} className="w-full overflow-hidden bg-[#6B5C08] py-4">
           <div className="marquee-content flex items-center gap-4 whitespace-nowrap">
